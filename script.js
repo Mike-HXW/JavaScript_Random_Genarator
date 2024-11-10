@@ -1,12 +1,9 @@
-function generate() {
-    const name = document.getElementById('nameInput').value.trim();
-    if (!name) {
-        document.getElementById('output').innerText = 'Please enter your name.';
-        return;
-    }
-
-    const fortunes = [
+let name = document.getElementById("nameInput");
+let button = document.getElementById("button");
+let output = document.getElementById("output");
+let fortunes = [
         'You will have a nice day!',
+        'You will be happy an entire day!',
         'You will meet someone you miss a lot!',
         'You will be lucky for all days long!',
         'You will overcome any difficulties you meet!',
@@ -14,18 +11,26 @@ function generate() {
         'You will get your efforts paid back pretty soon!'
     ];
 
-    const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-    document.getElementById('output').innerText = `${name}, your fortune is: ${randomFortune}`;
+button.addEventListener("click",function(){
+    let current_input = name.value;
+    generate(current_input);
     restyle();
+});
+
+function generate(incUserInput) {
+    var rand_index = Math.floor(Math.random() * fortunes.length)
+    console.log(rand_index);
+    var fortune_select = fortunes[rand_index];
+    output.innerText = incUserInput + ", your fortune is: " + fortune_select;
 }
 
 function restyle() {
-    const output = document.getElementById('output');
-    const colors = ['blue', 'orange', 'purple', 'light-green', 'brown'];
+    const colors = ['blue', 'orange', 'purple', 'green', 'brown'];
     const fonts = ['20px', '25px', '30px', '35px', '40px'];
-    const fontStyles = ['italic', 'normal', 'oblique', 'bold', 'lighter'];
+    const fontstyle = ['normal','italic'];
 
     output.style.color = colors[Math.floor(Math.random() * colors.length)];
     output.style.fontSize = fonts[Math.floor(Math.random() * fonts.length)];
-    output.style.fontStyle = fontStyles[Math.floor(Math.random() * fontStyles.length)];
+    output.style.fontStyle = fontstyle[Math.floor(Math.random() * fontstyle.length)];
 }
+
