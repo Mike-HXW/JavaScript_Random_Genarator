@@ -8,15 +8,25 @@
 </head>
 
 <body>
-    <h1>Random Fortune Generator</h1>
-    <label for="nameInput">Enter your name here :</label>
-    <input type="text" id="nameInput">
-    <button id = "button">Enter your name and click to get your fortune!
-    </button>
-    <div> 
-        <p id="output"> </p>
+    <div id="rellax-container">
+        <div class="rellax" data-rellax-speed="-1">🌟</div>
+        <div class="rellax" data-rellax-speed="-3">✨</div>
+        <div class="rellax" data-rellax-speed="-4">💫</div>
+        <div class="rellax" data-rellax-speed="0">🌙</div>
+        <div class="rellax" data-rellax-speed="3">✨</div>
     </div>
 
+    <main>
+        <h1>Random Fortune Generator</h1>
+        <label for="nameInput">Enter your name here :</label>
+        <input type="text" id="nameInput">
+        <button id="button">Enter your name and click to get your fortune!</button>
+        <div>
+            <p id="output"></p>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

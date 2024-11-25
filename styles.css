@@ -1,6 +1,68 @@
 body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+    position: relative;
+    background-color: darkblue;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 140vh; 
+
+main {
+    z-index: 2; 
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: lightcyan;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    justify-content: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.4); 
+    width: 80%; 
+    min-height: 40vh; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+#rellax-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    z-index: 1; 
+}
+
+.rellax {
+    position: absolute;
+    font-size: 5rem; 
+    color: gold;
+}
+
+.rellax:nth-child(1) {
+    top: 10%;
+    left: 15%;
+}
+
+.rellax:nth-child(2) {
+    top: 30%;
+    right: 20%;
+}
+
+.rellax:nth-child(3) {
+    top: 60%;
+    left: 30%;
+}
+
+.rellax:nth-child(4) {
+    top: 5%;
+    right: 5%;
+}
+
+.rellax:nth-child(5) {
+    top: 20%;
+    left: 50%;
 }
